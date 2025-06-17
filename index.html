@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Theme UI Components</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-brand">Your Logo</div>
+        <ul class="navbar-nav">
+            <li><a href="#buttons">Buttons</a></li>
+            <li><a href="#forms">Forms</a></li>
+                <li><a href="#cards">Cards</a></li>
+                <li><a href="#modals">Modals</a></li>
+                <li><a href="#stats">Stats</a></li>
+                <li><a href="#mobile-nav">Mobile Nav</a></li>
+                <li><a href="#toggles">Toggles</a></li>
+                <li><a href="#hero">Hero</a></li>
+                <li><a href="#alerts">Alerts & Toasts</a></li>
+                <li><a href="style-guide.html">Style Guide</a></li>
+            <li>
+                <div class="dark-mode-toggle">
+                    <input type="checkbox" id="dark-mode-switch">
+                    <label for="dark-mode-switch"></label>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <h1>Welcome to Dark Theme UI Components</h1>
+    <p>This is a placeholder for your UI components.</p>
+
+    <section id="buttons">
+        <h2>Buttons</h2>
+        <div class="button-group">
+            <button class="btn btn-primary">Primary Button</button>
+            <button class="btn btn-secondary">Secondary Button</button>
+            <button class="btn btn-disabled" disabled>Disabled Button</button>
+        </div>
+        <div class="button-group">
+            <button class="btn btn-primary"><i class="fas fa-plus"></i> Button with Icon</button>
+            <button class="btn btn-secondary"><i class="fas fa-arrow-right"></i> Another Button</button>
+        </div>
+    </section>
+
+    <section id="forms">
+        <h2>Forms</h2>
+        <form class="dark-form">
+            <div class="form-group">
+                <input type="text" id="text-input" required>
+                <label for="text-input">Text Input</label>
+            </div>
+            <div class="form-group">
+                <input type="email" id="email-input" required>
+                <label for="email-input">Email Input</label>
+            </div>
+            <div class="form-group password-group">
+                <input type="password" id="password-input" required>
+                <label for="password-input">Password</label>
+                <span class="password-toggle"><i class="fas fa-eye"></i></span>
+            </div>
+            <div class="form-group">
+                <input type="text" id="error-input" class="error" required>
+                <label for="error-input">Error State</label>
+                <span class="error-message">This field has an error.</span>
+            </div>
+            <div class="form-group">
+                <input type="text" id="success-input" class="success" required>
+                <label for="success-input">Success State</label>
+                <span class="success-message">This field is valid.</span>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="checkbox1">
+                <label for="checkbox1">Checkbox Option 1</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="radio1" name="radio-group">
+                <label for="radio1">Radio Option 1</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="radio2" name="radio-group">
+                <label for="radio2">Radio Option 2</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Form</button>
+        </form>
+    </section>
+
+    <section id="cards">
+        <h2>Cards</h2>
+        <div class="card-container">
+            <div class="card product-card">
+                <img src="https://via.placeholder.com/300x200" alt="Product Image">
+                <h3>Product Title</h3>
+                <p>Short description of the product.</p>
+                <span class="price">$99.99</span>
+                <button class="btn btn-primary">Add to Cart</button>
+            </div>
+
+            <div class="card profile-card">
+                <img src="https://via.placeholder.com/100" alt="Profile Picture" class="profile-pic">
+                <h3>John Doe</h3>
+                <p>Software Engineer</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <div class="card blog-card">
+                <img src="https://via.placeholder.com/300x200" alt="Blog Post Image">
+                <h3>Blog Post Title</h3>
+                <p class="blog-excerpt">A short excerpt from the blog post, enticing readers to click and read more.</p>
+                <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section id="modals">
+        <h2>Modals</h2>
+        <button class="btn btn-primary" id="openBasicModal">Open Basic Modal</button>
+        <button class="btn btn-secondary" id="openFormModal">Open Contact Us Modal</button>
+
+        <!-- Basic Modal -->
+        <div id="basicModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Basic Modal Title</h3>
+                <p>This is a simple modal window.</p>
+                <button class="btn btn-primary close-button">Close</button>
+            </div>
+        </div>
+
+        <!-- Form Modal -->
+        <div id="formModal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h3>Contact Us</h3>
+                <form class="dark-form">
+                    <div class="form-group">
+                        <input type="text" id="contact-name" required>
+                        <label for="contact-name">Your Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="contact-email" required>
+                        <label for="contact-email">Your Email</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="contact-message" rows="5" required></textarea>
+                        <label for="contact-message">Your Message</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats">
+        <h2>Stats Widgets</h2>
+        <div class="stats-container">
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-info">
+                    <div class="stat-value">$12,345</div>
+                    <div class="stat-label">Total Revenue</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">👥</div>
+                <div class="stat-info">
+                    <div class="stat-value">5,678</div>
+                    <div class="stat-label">New Users</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🛒</div>
+                <div class="stat-info">
+                    <div class="stat-value">1,234</div>
+                    <div class="stat-label">Orders</div>
+                </div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🚀</div>
+                <div class="stat-info">
+                    <div class="stat-value">98%</div>
+                    <div class="stat-label">Conversion Rate</div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Progress Bars</h3>
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%;"></div>
+                <span class="progress-text">Task Completion (75%)</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-fill" style="width: 50%;"></div>
+                <span class="progress-text">Project Progress (50%)</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="mobile-nav">
+        <h2>Mobile Navigation / Hamburger Menu</h2>
+        <button class="btn btn-primary" id="openMobileNav">Open Mobile Nav</button>
+
+        <div class="mobile-nav-overlay" id="mobileNavOverlay">
+            <div class="mobile-nav-drawer">
+                <button class="close-mobile-nav">&times;</button>
+                <ul class="mobile-nav-links">
+                    <li><a href="#buttons">Buttons</a></li>
+                    <li><a href="#forms">Forms</a></li>
+                    <li><a href="#cards">Cards</a></li>
+                    <li><a href="#modals">Modals</a></li>
+                    <li><a href="#stats">Stats</a></li>
+                    <li><a href="#mobile-nav">Mobile Nav</a></li>
+                    <li><a href="#toggles">Toggles</a></li>
+                    <li><a href="#hero">Hero</a></li>
+                    <li><a href="#alerts">Alerts</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="toggles">
+        <h2>Toggles & Switches</h2>
+        <div class="toggle-group">
+            <label class="switch">
+                <input type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+            <span>Notification Switch</span>
+        </div>
+        <div class="toggle-group">
+            <label class="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+            </label>
+            <span>Feature Toggle</span>
+        </div>
+    </section>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>Your Awesome Product Awaits</h1>
+            <p>Discover the future of digital experiences with our cutting-edge solutions.</p>
+            <button class="btn btn-primary">Learn More</button>
+            <button class="btn btn-secondary">Get Started</button>
+        </div>
+    </section>
+
+    <section id="alerts">
+        <h2>Alert & Toast UI</h2>
+        <div class="alert success">
+            <p><strong>Success!</strong> Your operation was completed successfully.</p>
+        </div>
+        <div class="alert error">
+            <p><strong>Error!</strong> Something went wrong. Please try again.</p>
+        </div>
+        <div class="alert info">
+            <p><strong>Info!</strong> This is an informational message.</p>
+        </div>
+        <div class="alert warning">
+            <p><strong>Warning!</strong> This action cannot be undone.</p>
+        </div>
+
+        <button class="btn btn-primary" id="showToast">Show Toast Message</button>
+
+        <div id="toast-container"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

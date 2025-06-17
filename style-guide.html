@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Style Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Specific styles for the style guide page */
+        .style-guide-section {
+            padding: 40px 20px;
+            margin-bottom: 30px;
+            background-color: #1F1F1F;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .style-guide-section h2 {
+            color: #EAEAEA;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #6A5ACD;
+            padding-bottom: 10px;
+        }
+
+        .color-palette {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #FFF;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .color-box.primary {
+            background-color: #121212;
+        }
+
+        .color-box.secondary {
+            background-color: #1F1F1F;
+        }
+
+        .color-box.light {
+            background-color: #EAEAEA;
+            color: #121212;
+            text-shadow: none;
+        }
+
+        .color-box.accent-blue {
+            background-color: #007BFF;
+        }
+
+        .color-box.accent-purple {
+            background-color: #6A5ACD;
+        }
+
+        .typography-scale h1, .typography-scale h2, .typography-scale h3, .typography-scale h4, .typography-scale h5, .typography-scale h6, .typography-scale p {
+            margin-bottom: 15px;
+        }
+
+        .spacing-system div {
+            background-color: #6A5ACD;
+            height: 20px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+        }
+
+        .spacing-system .s-4 {
+            width: 40px;
+        }
+
+        .spacing-system .s-8 {
+            width: 80px;
+        }
+
+        .spacing-system .s-16 {
+            width: 160px;
+        }
+
+        .spacing-system .s-24 {
+            width: 240px;
+        }
+
+        .shadow-examples div {
+            width: 150px;
+            height: 80px;
+            background-color: #1F1F1F;
+            border-radius: 8px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            color: #EAEAEA;
+        }
+
+        .shadow-examples .shadow-sm {
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .shadow-examples .shadow-md {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .shadow-examples .shadow-lg {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .shadow-examples .shadow-xl {
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .border-radius-examples div {
+            width: 80px;
+            height: 80px;
+            background-color: #6A5ACD;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+            color: #EAEAEA;
+            font-weight: bold;
+        }
+
+        .border-radius-examples .rounded-sm {
+            border-radius: 4px;
+        }
+
+        .border-radius-examples .rounded-md {
+            border-radius: 8px;
+        }
+
+        .border-radius-examples .rounded-lg {
+            border-radius: 12px;
+        }
+
+        .border-radius-examples .rounded-full {
+            border-radius: 9999px;
+        }
+
+        /* Light mode adaptations for style guide */
+        body.light-mode .style-guide-section {
+            background-color: #F5F5F5;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body.light-mode .style-guide-section h2 {
+            color: #333;
+            border-bottom-color: #007BFF;
+        }
+
+        body.light-mode .color-box.primary {
+            background-color: #EAEAEA;
+            color: #121212;
+        }
+
+        body.light-mode .color-box.secondary {
+            background-color: #F5F5F5;
+            color: #1F1F1F;
+        }
+
+        body.light-mode .color-box.light {
+            background-color: #121212;
+            color: #EAEAEA;
+        }
+
+        body.light-mode .shadow-examples div {
+            background-color: #F5F5F5;
+            color: #333;
+        }
+
+        body.light-mode .border-radius-examples div {
+            background-color: #007BFF;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navbar-brand">UIUX Kit</div>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Components</a></li>
+                <li><a href="style-guide.html">Style Guide</a></li>
+            </ul>
+            <div class="dark-mode-toggle">
+                <input type="checkbox" id="dark-mode-switch" class="dark-mode-switch">
+                <label for="dark-mode-switch" class="dark-mode-label"></label>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="style-guide-section">
+            <h2>Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-box primary">#121212<br>Primary Dark</div>
+                <div class="color-box secondary">#1F1F1F<br>Secondary Dark</div>
+                <div class="color-box light">#EAEAEA<br>Light Text</div>
+                <div class="color-box accent-blue">#007BFF<br>Accent Blue</div>
+                <div class="color-box accent-purple">#6A5ACD<br>Accent Purple</div>
+            </div>
+        </section>
+
+        <section class="style-guide-section">
+            <h2>Typography Scale</h2>
+            <div class="typography-scale">
+                <h1>Heading 1 - Inter/Poppins/Rubik</h1>
+                <h2>Heading 2 - Inter/Poppins/Rubik</h2>
+                <h3>Heading 3 - Inter/Poppins/Rubik</h3>
+                <h4>Heading 4 - Inter/Poppins/Rubik</h4>
+                <h5>Heading 5 - Inter/Poppins/Rubik</h5>
+                <h6>Heading 6 - Inter/Poppins/Rubik</h6>
+                <p>Paragraph text - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+        </section>
+
+        <section class="style-guide-section">
+            <h2>Spacing System</h2>
+            <div class="spacing-system">
+                <div class="s-4">4px</div>
+                <div class="s-8">8px</div>
+                <div class="s-16">16px</div>
+                <div class="s-24">24px</div>
+            </div>
+        </section>
+
+        <section class="style-guide-section">
+            <h2>Shadows</h2>
+            <div class="shadow-examples">
+                <div class="shadow-sm">Small Shadow</div>
+                <div class="shadow-md">Medium Shadow</div>
+                <div class="shadow-lg">Large Shadow</div>
+                <div class="shadow-xl">Extra Large Shadow</div>
+            </div>
+        </section>
+
+        <section class="style-guide-section">
+            <h2>Border Radius</h2>
+            <div class="border-radius-examples">
+                <div class="rounded-sm">4px</div>
+                <div class="rounded-md">8px</div>
+                <div class="rounded-lg">12px</div>
+                <div class="rounded-full">Full</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
